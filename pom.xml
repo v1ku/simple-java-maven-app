@@ -21,9 +21,8 @@
         <!-- Build an executable JAR -->
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-jar-plugin</artifactId>
-        <version>3.1.0</version>
+        <version>3.0.2</version>
         <configuration>
-          <failOnMissingWebXml>false</failOnMissingWebXml>  
           <archive>
             <manifest>
               <addClasspath>true</addClasspath>
@@ -32,6 +31,24 @@
             </manifest>
           </archive>
         </configuration>
+      </plugin>
+      <plugin>
+        <groupId>com.atlassian.maven.plugins</groupId>
+        <artifactId>clover-maven-plugin</artifactId>
+        <configuration>
+          <generatePdf>true</generatePdf>
+          <generateXml>true</generateXml>
+          <generateHtml>false</generateHtml>
+          <generateJson>false</generateJson>
+        </configuration>
+        <executions>
+          <execution>
+            <phase>generate-sources</phase>
+            <goals>
+              <goal>instrument</goal>
+            </goals>
+          </execution>
+        </executions>
       </plugin>
     </plugins>
   </build>
