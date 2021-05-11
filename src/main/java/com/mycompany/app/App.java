@@ -15,8 +15,8 @@ public class App
     }
     
     public static int calc(int a, int b) {
-        int result = a * b;
-        return  result;
+        int result1 = a * b;
+        return  result1;
     }
     
     private final String getMessage() {
