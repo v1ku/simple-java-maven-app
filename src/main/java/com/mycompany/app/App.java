@@ -15,7 +15,7 @@ public class App
     }
     
     public static int calc(int a, int b) {
-        int result1 = a - b;
+        int result1 = a * b;
         return  result1;
     }
     
